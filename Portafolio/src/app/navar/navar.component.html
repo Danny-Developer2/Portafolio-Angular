@@ -4,7 +4,7 @@
     <h3 class="mb-3 text-primary typing-effect">Portafolio</h3>
     <nav class="nav nav-masthead justify-content-center">
       <a class="nav-link fw-bold py-1 px-3 active text-light" aria-current="page" [routerLink]="'home'">Home</a>
-      <a *ngIf="role === 'admin'" class="nav-link fw-bold py-1 px-3 text-light" [routerLink]="'dashboard'">Dashboard</a> <!-- Solo visible si el rol es admin -->
+      <a *ngIf="role === 'admin'" class="nav-link fw-bold py-1 px-3 text-light" [routerLink]="'admin'">Dashboard</a> <!-- Solo visible si el rol es admin -->
       <a class="nav-link fw-bold py-1 px-3 text-light" [routerLink]="'ciberseguridad'">Ciberseguridad</a>
       <a class="nav-link fw-bold py-1 px-3 text-light" [routerLink]="'contacto'">Contacto</a>
       <a class="nav-link fw-bold py-1 px-3 text-light" [routerLink]="'sobre-mi'">Sobre mi</a>

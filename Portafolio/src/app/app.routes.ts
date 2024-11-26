@@ -6,6 +6,7 @@ import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { RoleGuard } from './services/role.guard';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
     {path: 'ciberseguridad', component: CiberseguridadComponent},
@@ -19,9 +20,9 @@ export const routes: Routes = [
       },
       {
         path: 'admin',
-        component: CiberseguridadComponent,
+        component: DashboardComponent,
         canActivate: [RoleGuard], 
         data: { role: 'admin' },  
       },
-    {path: '**', redirectTo: 'home'}
+    // {path: '**', redirectTo: 'home'}
 ];

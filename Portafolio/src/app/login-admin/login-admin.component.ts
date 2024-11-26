@@ -41,28 +41,33 @@ export class LoginAdminComponent  {
 
     this.loading = true;
     const { username, password } = this.loginForm.value;
-
     this.authService.login(username, password).subscribe((user) => {
       if (user) {
         const role = this.authService.getUserRole();
         if (role === 'admin') {
-          this.router.navigate(['/ciberseguridad']);
-          this.updateAuthStatus();  // Actualizar el estado después de hacer login 
+          this.router.navigate(['/admin']);
+          this.updateAuthStatus(); 
+        } else if (role === 'user') {
+          this.router.navigate(['/home']);
         } else {
           this.errorMessage = 'Unauthorized: Admins only';
           this.router.navigate(['/unauthorized']);
         }
-        if (role === 'user') {
-          this.router.navigate(['/home']);
-        }
+    
         // Manually trigger change detection after login success
         this.cdRef.detectChanges();
       } else {
-        this.errorMessage = 'Invalid credentials';
+        this.errorMessage = 'Invalid credentials: Usuario inválido: Verifica el nombre de usuario o contraseña';
+        console.log('Usuario inválido: Verifica el nombre de usuario o contraseña');
+        setTimeout(() => {
+          this.errorMessage = '';
+        }, 3000);
       }
-
+    
       this.loading = false;
     });
+    
+   
   }
   updateAuthStatus(): void {
     this.isAuthenticated = this.authService.isAuthenticated();

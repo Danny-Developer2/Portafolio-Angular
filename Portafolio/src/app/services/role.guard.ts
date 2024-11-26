@@ -28,7 +28,7 @@ export class RoleGuard implements CanActivate {
       }
     } else {
       // Si no está autenticado, redirige al login
-      this.router.navigate(['/login']);
+      this.router.navigate(['/login-admin']);
       return false;
     }
   }
