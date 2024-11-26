@@ -1,0 +1,28 @@
+.typing-effect {
+    display: inline-block;            /* Mantiene el efecto en línea */
+    overflow: hidden;                 /* Oculta el texto fuera del ancho */
+    white-space: nowrap;              /* Impide que el texto haga saltos de línea */
+    border-right: 3px solid #0d6efd;  /* Simula el cursor */
+    font-family: 'Courier New', monospace; /* Fuente estilo máquina de escribir */
+    animation: typing 15s steps(30, end), blink 1.5s step-end infinite;  /* Aumento el tiempo de la animación typing */
+  }
+  
+  /* Animación de escribir */
+  @keyframes typing {
+    from {
+      width: 0; /* Comienza desde 0 ancho */
+    }
+    to {
+      width: 100%; /* Llega al ancho completo del texto */
+    }
+  }
+  
+  /* Animación del cursor parpadeante */
+  @keyframes blink {
+    from, to {
+      border-color: transparent; /* Hace desaparecer el cursor */
+    }
+    50% {
+      border-color: #0d6efd; /* Muestra el cursor */
+    }
+  }

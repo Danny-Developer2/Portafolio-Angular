@@ -1,0 +1,15 @@
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    height: 100%; /* Asegura que el contenedor del carrusel ocupe el 100% de la altura */
+  }
+
+  .carousel-item {
+    height: 100vh; /* Asegura que cada item del carrusel ocupe el 100% de la altura de la ventana */
+  }
+
+  .carousel-image {
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+    height: 100%; /* Hace que la imagen ocupe toda la altura disponible */
+    width: 100%;  /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  }

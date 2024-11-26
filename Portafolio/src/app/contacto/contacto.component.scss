@@ -1,0 +1,75 @@
+body {
+  color: #000;
+  overflow-x: hidden;
+  height: 100%;
+  background-image: url("https://i.imgur.com/GMmCQHC.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.Foto-formulairo img{
+    margin-top: -100%;
+}
+.card {
+  padding: 30px 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: none !important;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.blue-text {
+  color: #00bcd4;
+}
+.form-control-label {
+  margin-bottom: 0;
+}
+input,
+textarea,
+button {
+  padding: 8px 15px;
+  border-radius: 5px !important;
+  margin: 5px 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 18px !important;
+  font-weight: 300;
+}
+input:focus,
+textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #00bcd4;
+  outline-width: 0;
+  font-weight: 400;
+}
+.btn-block {
+  text-transform: uppercase;
+  font-size: 15px !important;
+  font-weight: 400;
+  height: 43px;
+  cursor: pointer;
+}
+.btn-block:hover {
+  color: #fff !important;
+}
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+}
+.Foto-formulario {
+    position: absolute;
+    left: 0%; /* Ajusta la posición horizontal de la imagen */
+    top: 80%; /* Centra la imagen verticalmente */
+    transform: translateY(-2%); /* Alinea la imagen con la altura de los botones */
+    width: 20%; /* Ajusta el tamaño de la imagen según sea necesario */
+    max-width: 50%; /* Evita que la imagen se haga demasiado grande */
+    z-index: -1; /* La imagen se coloca detrás del formulario */
+  }
+
+  @media (max-width: 1200px) {
+    .Foto-formulario {
+      display: none; /* Oculta la imagen en pantallas más pequeñas */
+    }
+  }
