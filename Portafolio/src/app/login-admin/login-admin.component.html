@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="d-flex bg-light shadow-lg rounded" style="width: 60rem;">
+        <!-- Contenedor de la imagen -->
+        <div class="d-none d-md-block p-3">
+          <img src="https://landing-8ggtrytqo-danny-developer2s-projects.vercel.app/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Favatar-1.f37cd02d.png&w=1920&q=75" 
+               width="400" alt="Sign In Image" class="img-fluid rounded-start">
+        </div>
+        <!-- Contenedor de la tarjeta -->
+        <div class="card flex-grow-1">
+          <div class="card-header bg-primary text-white">
+            <h3 class="text-center">Sign In</h3>
+            <div class="d-flex justify-content-end social_icon">
+              <span class="mx-2"><i class="fab fa-facebook-square fa-2x"></i></span>
+              <span class="mx-2"><i class="fab fa-google-plus-square fa-2x"></i></span>
+              <span class="mx-2"><i class="fab fa-twitter-square fa-2x"></i></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter username">
+                </div>
+                <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="text-danger">
+                  Username is required.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                  <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter password">
+                </div>
+                <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-danger">
+                  Password must be at least 6 characters long.
+                </div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember Me</label>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer text-center">
+            <div class="mb-2">
+              Don't have an account? <a href="#">Sign Up</a>
+            </div>
+            <div>
+              <a href="#">Forgot your password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
