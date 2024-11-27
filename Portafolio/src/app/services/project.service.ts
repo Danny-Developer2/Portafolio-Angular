@@ -1,25 +1,27 @@
 // src/app/services/project.service.ts
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Project } from '../models/project';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProjectService {
-  private storageKey = 'projects';
+  private http = inject(HttpClient);
 
-  constructor() {}
+  private apiUrl = 'http://localhost:5258/Proyectos';
 
-  // Obtener todos los proyectos
-  getProjects(): Project[] {
-    const storedProjects = localStorage.getItem(this.storageKey);
-    return storedProjects ? JSON.parse(storedProjects) : [];
+  
+
+  // Método para obtener proyectos desde la API
+  getProjects(): Observable<Project[]> {
+    return this.http.get<Project[]>(this.apiUrl);
   }
 
-  // Guardar un nuevo proyecto
-  addProject(project: Project): void {
-    const projects = this.getProjects();
-    projects.push(project);
-    localStorage.setItem(this.storageKey, JSON.stringify(projects));
+  // Método para agregar un nuevo proyecto
+  
+  addProject(project: Project): Observable<Project> {
+    return this.http.post<Project>(this.apiUrl, project);
   }
 }

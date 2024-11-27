@@ -24,5 +24,5 @@ export const routes: Routes = [
         canActivate: [RoleGuard], 
         data: { role: 'admin' },  
       },
-    // {path: '**', redirectTo: 'home'}
+    {path: '**', redirectTo: 'home'}
 ];

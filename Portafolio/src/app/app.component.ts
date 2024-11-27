@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavarComponent } from './navar/navar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',

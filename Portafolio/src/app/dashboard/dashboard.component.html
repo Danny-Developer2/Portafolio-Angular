@@ -44,6 +44,17 @@
                 />
               </div>
               <div class="mb-3">
+                <label for="img" class="form-label">Imagen del proyecto</label>
+                <input
+                  [(ngModel)]="img"
+                  id="img"
+                  name="img"
+                  class="form-control"
+                  placeholder="Link de imagen del proyecto"
+                  required
+                />
+              </div>
+              <div class="mb-3">
                 <label for="projectStartDate" class="form-label">Fecha de Inicio</label>
                 <input
                   [(ngModel)]="projectStartDate"
@@ -76,6 +87,7 @@
                     <th>Descripción</th>
                     <th>Fecha de Inicio</th>
                     <th>Repositorio Github</th>
+                    <th>Imagen del proyecto</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -86,6 +98,7 @@
                     <td>
                       <a href="{{ project.repository }}" target="_blank">{{ project.repository }}</a>
                     </td>
+                    <td>{{project.img}}</td>
                   </tr>
                 </tbody>
               </table>
