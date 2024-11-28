@@ -1,0 +1,33 @@
+<div class="container w-100" style="margin-top: 5%;">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <!-- Iterar sobre los proyectos -->
+      <div class="col" *ngFor="let proyecto of proyectos">
+        <div class="card h-100">
+          <img
+            [src]="proyecto.img || 'https://via.placeholder.com/150'"
+            class="card-img-top"
+            alt="Imagen del proyecto"
+            height="200"
+            width="100%"
+          />
+          <div class="card-body d-flex flex-column">
+            <div>
+              <h5 class="card-title">{{ proyecto.name }}</h5>
+              <p class="card-text">
+                {{ proyecto.description }}
+              </p>
+            </div>
+            
+              <p class="card-text mb-2 mt-auto">
+                <strong>Fecha de inicio:</strong> {{ proyecto.startDate }}
+              </p>
+              <a [href]="proyecto.repository" class="btn btn-primary" *ngIf="proyecto.repository">
+                Ver repositorio
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -5,4 +5,5 @@ export interface Project {
   startDate: string;
   repository:string;
   img: string;
+  id: number;
 }

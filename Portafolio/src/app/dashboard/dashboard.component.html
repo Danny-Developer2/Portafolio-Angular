@@ -88,6 +88,7 @@
                     <th>Fecha de Inicio</th>
                     <th>Repositorio Github</th>
                     <th>Imagen del proyecto</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -98,7 +99,14 @@
                     <td>
                       <a href="{{ project.repository }}" target="_blank">{{ project.repository }}</a>
                     </td>
-                    <td>{{project.img}}</td>
+                    <td><img src="{{project.img}}" alt="Imagen de proyecto" style="height: 100%; width: 100%;"></td>
+                    <td> <button
+                      class="btn btn-danger mx-2"
+                      style="font-family: 'Poppins', sans-serif"
+                      (click)="deleteActionVehicle(project.id)"
+                    >
+                      Eliminar
+                    </button></td>
                   </tr>
                 </tbody>
               </table>

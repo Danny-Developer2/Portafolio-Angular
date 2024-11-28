@@ -7,12 +7,14 @@ import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { RoleGuard } from './services/role.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
 
 export const routes: Routes = [
     {path: 'ciberseguridad', component: CiberseguridadComponent},
     {path: 'home', component: HomeComponent},
     {path: 'contacto' , component: ContactoComponent},
     {path: 'sobre-mi', component: SobreMiComponent}, 
+    {path: 'proyectos', component: ProyectosComponent},  // Redireccionar al home por defecto
     {path: 'login-admin', component: LoginAdminComponent},
     {
         path: 'unauthorized',

@@ -1,0 +1,46 @@
+.container {
+    margin-top: 3rem; /* Agregar espacio desde la parte superior */
+  }
+  
+  .featurette {
+    margin-bottom: 3rem; /* Espacio entre cada achievement */
+    padding: 2rem 0; /* Espacio dentro de cada bloque */
+  }
+  
+  .featurette-heading {
+    font-size: 1.75rem; /* Mejor tamaño para el título */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+  }
+  
+  .featurette-heading .text-body-secondary {
+    font-weight: lighter;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+    margin-bottom: 1rem; /* Espacio debajo de la descripción */
+  }
+  
+  .btn-primary {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .featurette-image {
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 1rem; /* Espacio por encima de la imagen */
+  }
+  
+  .featurette-divider {
+    margin: 2rem 0; /* Separación extra entre secciones */
+  }
+  
+  /* Espacio entre las columnas en pantallas grandes */
+  @media (min-width: 768px) {
+    .featurette .col-md-7, .featurette .col-md-5 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  

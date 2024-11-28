@@ -1,5 +1,5 @@
 // src/app/dashboard/dashboard.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import { Project } from '../models/project';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +20,8 @@ export class DashboardComponent implements OnInit {
   projectStartDate: string = '';
   repositoryName: string = '';
   img: string = '';
+  id: number = 0;
+  
 
   constructor(private projectService: ProjectService) {}
 
@@ -41,6 +43,7 @@ export class DashboardComponent implements OnInit {
       startDate: this.projectStartDate,
       repository: this.repositoryName,
       img: this.img,
+      id: this.id, 
     };
     console.log(newProject);
 
@@ -62,5 +65,13 @@ export class DashboardComponent implements OnInit {
     this.projectStartDate = '';
     this.repositoryName = '';
     this.img = '';
+    this.id = 0;
+  }
+  deleteActionVehicle(vehicleId: number | null | undefined){ 
+    this.projectService.deleteVehicle(vehicleId)
+    console.log(`Vehículo eliminado con éxito`);
+    window.location.reload();
+    // this.router.navigate(['vehicles']);
+    
   }
 }
