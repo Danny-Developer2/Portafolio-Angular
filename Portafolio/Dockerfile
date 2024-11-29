@@ -17,10 +17,10 @@ RUN npm install -g @angular/cli
 COPY . .
 
 # Construye la aplicación Angular para producción
-RUN ng build --prod
+RUN ng build  --watch --configuration development
 
 # Expone el puerto 8080 para servir la aplicación
 EXPOSE 8080
 
 # Ejecuta el servidor de producción, usando http-server para servir los archivos de dist
-CMD ["npx", "http-server", "dist/portafolio", "-p", "8080"]
+CMD ["npx", "http-server", "dist/portafolio/browser", "-p", "8080"]
