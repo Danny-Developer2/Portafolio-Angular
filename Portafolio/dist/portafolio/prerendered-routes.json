@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/admin",
+    "/ciberseguridad",
+    "/contacto",
+    "/home",
+    "/login-admin",
+    "/proyectos",
+    "/sobre-mi",
+    "/unauthorized"
+  ]
+}
