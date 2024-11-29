@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 4600;
+const port = process.env.PORT || 8080;
 
 // Servir los archivos estáticos de la build de Angular
 app.use(express.static(path.join(__dirname, 'dist/portafolio/browser/browser')));
