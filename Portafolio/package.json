@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run config -- --environment=dev && ng serve",
-    "start:railway": "node server.js",
-    "build": "npm run config -- --environment=prod && ng build --configuration production",
+    "build": "ng build",
+    "build:prod": "ng build --configuration production",
+    "start:railway":"node server.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve:ssr:Portafolio": "node dist/portafolio/server/server.mjs",
+    "postbuild": "mv dist/portafolio/browser/_redirects dist/portafolio/"
   },
   "private": true,
   "dependencies": {
