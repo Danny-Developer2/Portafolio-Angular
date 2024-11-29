@@ -4,11 +4,10 @@ import { AuthService } from '../services/auth.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-navar',
-  standalone: true,
-  imports: [RouterLink, CommonModule],
-  templateUrl: './navar.component.html',
-  styleUrl: './navar.component.scss'
+    selector: 'app-navar',
+    imports: [RouterLink, CommonModule],
+    templateUrl: './navar.component.html',
+    styleUrl: './navar.component.scss'
 })
 export class NavarComponent {
   isAuthenticated: boolean = false;

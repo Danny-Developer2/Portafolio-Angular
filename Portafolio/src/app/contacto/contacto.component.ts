@@ -4,11 +4,10 @@ import { HttpClient } from '@angular/common/http'; // Importa HttpClient
 import { Observable } from 'rxjs'; // Para trabajar con observables
 
 @Component({
-  selector: 'app-contacto',
-  standalone: true,
-  imports: [ReactiveFormsModule], // Importamos el módulo necesario para formularios reactivos
-  templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.scss']
+    selector: 'app-contacto',
+    imports: [ReactiveFormsModule], // Importamos el módulo necesario para formularios reactivos
+    templateUrl: './contacto.component.html',
+    styleUrls: ['./contacto.component.scss']
 })
 export class ContactoComponent {
   contactoForm: FormGroup;

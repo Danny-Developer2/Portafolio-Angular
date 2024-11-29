@@ -7,11 +7,10 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [FormsModule, CommonModule], // Agrega HttpClientModule aquí
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+    selector: 'app-dashboard',
+    imports: [FormsModule, CommonModule], // Agrega HttpClientModule aquí
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
   projects: Project[] = [];

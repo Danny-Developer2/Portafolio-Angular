@@ -5,11 +5,10 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-login-admin',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './login-admin.component.html',
-  styleUrls: ['./login-admin.component.scss'],
+    selector: 'app-login-admin',
+    imports: [ReactiveFormsModule, CommonModule],
+    templateUrl: './login-admin.component.html',
+    styleUrls: ['./login-admin.component.scss']
 })
 export class LoginAdminComponent  {
   loginForm: FormGroup;

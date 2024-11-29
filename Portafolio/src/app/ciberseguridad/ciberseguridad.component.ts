@@ -6,11 +6,10 @@ import { AuthService } from '../services/auth.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-ciberseguridad',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './ciberseguridad.component.html',
-  styleUrls: ['./ciberseguridad.component.scss']
+    selector: 'app-ciberseguridad',
+    imports: [CommonModule],
+    templateUrl: './ciberseguridad.component.html',
+    styleUrls: ['./ciberseguridad.component.scss']
 })
 export class CiberseguridadComponent implements OnInit, OnDestroy {
   achievements: any[] = []; // Propiedad para almacenar los datos del endpoint
